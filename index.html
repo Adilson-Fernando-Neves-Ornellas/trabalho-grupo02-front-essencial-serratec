@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Pagina de Login</title>
+  </head>
+  <body>
+    <!-- html do menu modal fechado  -->
+    <h2>Trabalho SerraTec Grupo 02</h2>
+
+    <button onclick="document.getElementById('id01').style.display='block' ;CarregarLocalStorage()" style="width: auto">
+      LOGIN
+    </button>
+
+    <!-- html do menu modal aberto  -->
+    <div id="id01" class="modal">
+
+      <form class="modal-content animate" method="post" action="./pages/home/home.html" onsubmit="return VerificarListaUsuarios()">
+
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">
+            &times;
+          </span>
+        </div>
+
+        <div class="container">
+          <label for="nome"><b>Nome</b></label>
+          <input type="text" placeholder="Nome" name="nome" required />
+
+          <label for="senha"><b>Senha</b></label>
+          <input type="password" placeholder="Senha" name="senha" required />
+
+          <button type="submit">LOGIN</button>
+          <label>
+            <input onclick="gravarSenhaNavegador()" type="checkbox" class="inputGravarSenha" name="remember"/> Gravar
+          </label>
+        </div>
+
+        <div class="container" style="background-color: #f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">
+            Cancelar
+          </button>
+          <span class="psw"
+            ><a style="color: black; text-decoration: none;" href="./pages/cadastro/cadastro.html"> CADASTRA-SE</a></span>
+        </div>
+      </form>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

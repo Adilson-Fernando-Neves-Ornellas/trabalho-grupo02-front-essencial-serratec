@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css">
+    <title>Pagina de Cadastro</title>
+</head>
+<body>
+    <div id="id01" class="modal">
+        <form class="modal-content animate" method="post" action="../../index.html" onsubmit="return AdicionarUsuarioNalistaLocalStorage()">
+            
+            <div class="imgcontainer">
+                <h1 style="margin-left: 15px;" >Cadastro de novos usuarios</h1>
+                <span class="close" title="Close Modal" >
+                    <a style="color: black; text-decoration: none;" href="../../index.html"> &times; </a>
+                </span>
+            </div>
+
+            <div class="container">
+                <label for="nome"><b>Nome</b></label>
+                <input type="text" placeholder="Nome" name="nome" required />
+
+                <label for="senha"><b>Senha</b></label>
+                <input type="password" placeholder="Senha" name="senha" required />
+
+                <label for="email"><b>E-mail</b></label>
+                <input type="text" placeholder="E-mail" name="email" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"/>
+
+                <label for="telefone"><b>Telefone</b></label>
+                <input type="number" placeholder="Telefone" name="telefone" required pattern="[0-9]{8}"/>
+
+                <button type="submit">Cadastrar Usuario</button>
+            </div>
+
+            <div class="container" style="background-color: #f1f1f1; display: flex; align-items: center; justify-content: center;">
+            <button type="button" class="cancelbtn">
+                <a style="color: white; text-decoration: none; " href="../../index.html">Cancelar</a>
+            </button>
+        </form>
+
+    <script src="cadastro.js"></script>
+</body>
+</html>
