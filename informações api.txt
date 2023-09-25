@@ -1,0 +1,36 @@
+chave key 
+b2f9873d60187269bf84d1c52232c576
+
+
+Pesquise a lista de cidades do país.
+http://apiadvisor.climatempo.com.br/api/v1/locale/city?country=BR&token=b2f9873d60187269bf84d1c52232c576
+
+Obtenha IDs de cidades registradas para token.
+http://apiadvisor.climatempo.com.br/api-manager/user-token/b2f9873d60187269bf84d1c52232c576/locales
+							   chave key
+
+Retorna o texto da análise sinótica para o país determinado.
+http://apiadvisor.climatempo.com.br/api/v1/anl/synoptic/locale/BR?token=b2f9873d60187269bf84d1c52232c576
+							      pais	  chave key
+
+Pesquise cidade por nome e/ou estado/província e país.
+http://apiadvisor.climatempo.com.br/api/v1/locale/city?name=São Paulo&state=SP&token=b2f9873d60187269bf84d1c52232c576
+							    cidade         estado     chave key
+
+Temperatura climática por ID da cidade ou latitude e longitude.
+http://apiadvisor.climatempo.com.br/api/v1/climate/temperature/locale/3477?token=b2f9873d60187269bf84d1c52232c576
+								    idcidade	  chave key
+
+Previsão para 15 dias por Id da cidade.
+							Idcidade		chave key
+
+
+Chuva climática para o ID da cidade ou latitude e longitude.
+http://apiadvisor.climatempo.com.br/api/v1/climate/rain/locale/3477?token=b2f9873d60187269bf84d1c52232c576
+							      idCidade     chave key
+
+Registre o ID da cidade no token.
+curl -X PUT \
+'http://apiadvisor.climatempo.com.br/api-manager/user-token/b2f9873d60187269bf84d1c52232c576/locales' \
+-H 'Content-Type: application/x-www-form-urlencoded' \
+-d 'localeId[]=3477'
